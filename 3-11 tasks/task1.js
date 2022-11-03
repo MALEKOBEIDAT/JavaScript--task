@@ -2,7 +2,7 @@ var mark;
 
 mark = prompt( "Please input the mark(%)" );
 
-if(mark<50){
+if( mark>0 && mark<50){
     document.write("Fail")
 
 }
@@ -33,6 +33,12 @@ else if(mark>=80 && mark<=89){
 
 else if(mark>=90 && mark<=99){
     document.write("A+")
+
+
+}
+
+else{
+    document.write("Undefined")
 
 
 }
