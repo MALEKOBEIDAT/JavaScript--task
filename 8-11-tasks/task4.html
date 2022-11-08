@@ -4,74 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task4</title>
+    <title>Document</title>
     <style>
-        #tooshort{
-            display: none;
-        }
-        #doesnt{
-            display:none;
-        }
-        #final{
+        #sub{
             display: none;
         }
     </style>
 </head>
 <body>
-    <table>
-        <tr>
-            <td> Passward (Minimum 6 characters );</td>
-            <td> <input type="password" id="pass1"  onkeyup="passw1()"> <span id="tooshort"  >too short</span><br></td>
-        </tr>
-        <tr>
-            <td>  Repeat Passward</td>
-            <td><input type="password" id="pass2" onkeyup="passw2()"><span id="doesnt">The two passwards don't match</span></td>
-        </tr>
-        <tr>
-            <td><input type="button" value="submet" id="final"></td>
-        </tr>
-    </table>
-    <script>
-        function passw1(){
-            var passward1 = document.getElementById("pass1").value;
-            if(passward1.length<6){
-                document.getElementById("tooshort").style.display="inline-block"
-            }
-            else {
-                document.getElementById("tooshort").style.display="none"
-            }
-        }
+    <form action="">
+        <label for="">Password</label >
+        <input type="password" id="pass1" onchange="any()">
+        <span></span>
+        <br>
 
-        function passw2(){
-            var passward1 = document.getElementById("pass1").value;
+        <label for=""> Repat Password</label>
+        <input type="password" id="pass2" onchange="any()">
+        <span></span>
+        <br>
 
-            var passward2 = document.getElementById("pass2").value;
-            if(passward1 === passward2){
-                document.getElementById("doesnt").style.display="none";
-             
-
-            } 
-            else {
-                document.getElementById("doesnt").style.display="inline-block"
-            }
-            if(passward2.length>=6 && passward1 === passward2 ){
-                    document.getElementById("final").style.display="inline-block";
-
-                }
-                else{
-                    document.getElementById("final").style.display="none";
-
-                }
-        }
-
-     
+        <input type="submit" value="Submit" id="sub" >
 
 
+    </form>
 
-    </script>
-     
-   
 
     
 </body>
+
+<script>
+
+    function any(){
+       
+        var x = document.getElementById("pass1").value;
+   
+        var y = document.getElementById("pass2").value;
+
+        if (x.length<=6){
+            document.getElementsByTagName("span")[0].innerHTML="too Short"
+        }
+
+        else if(x!=y && y!=0){
+            document.getElementsByTagName("span")[1].innerHTML="Dosnt Match"
+
+
+        }
+
+        else if(x==y){
+            document.getElementById("sub").style.display="block";
+
+        }
+
+
+    }
+
+
+
+</script>
 </html>
