@@ -1,5 +1,5 @@
 
-var a =prompt  ("Enter")
+var a =prompt  ("Enter the Num")
 
 var x =Number(a);
 

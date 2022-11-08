@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select name="" id="size" onclick="fontsize()">
+
+        <option value="12pt">12pt</option>
+    </select>
+
+
+    <select name="" id="choose" onclick="select()">
+        <option value="Arial">Arial</option>
+
+    </select>
+
+
+    <form action=""  >
+        <input type="checkbox" id="itilac"  onclick="one()">
+        <label for="a">itilic</label>
+
+        <input type="checkbox" id="bold" onclick="tow()" >
+        <label for="b">bold</label>
+
+        <input type="checkbox" id="underline" onclick="three()" >
+        <label for="c">underline</label>
+
+
+
+    </form>
+
+    <br>
+
+    <p id="textt" style="  border: black solid 2px;  "  >
+
+        My Name MAlek Obeidat Full Stack Developer
+    </p>
+
+  
+</body>
+
+
+
+
+
+
+
+
+
+<script>
+
+
+    document.getElementById("textt").style.width="650px";
+    document.getElementById("textt").style.height="150px";
+
+
+
+
+
+
+
+    function one(){
+       
+            document.getElementById("textt").style.fontStyle="italic";
+
+        }
+
+
+
+    function tow(){
+        document.getElementById("textt").style.fontWeight="bold";
+
+
+    }    
+
+
+
+    
+    function three(){
+        document.getElementById("textt").style.textDecoration="underline";
+
+
+
+        
+    
+
+    
+
+}    
+
+
+
+function select(){
+
+
+
+
+var x=document.getElementById("choose").value;
+
+if(x=="Arial"){
+
+    document.getElementById("textt").style.fontStyle="Arial, Helvetica, sans-serif";
+
+}
+
+}
+
+
+
+function fontsize(){
+
+
+
+
+
+
+    var y=document.getElementById("size").value;
+
+
+    if(y=="12pt"){
+
+    
+        document.getElementById("textt").style.fontSize="smaller";
+
+
+    }
+
+
+}
+
+ 
+
+ 
+
+
+
+
+   
+
+
+
+        
+        
+
+
+       
+       
+
+
+</script>
+</html>

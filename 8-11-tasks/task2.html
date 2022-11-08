@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <select name="" id="choose" onclick="select()">
+        <option value="Jordan">Jordan</option>
+        <option value="Qatar">Qatar</option>
+        <option value="Palastine">Palastine</option>
+    </select>
+
+    <br>
+    <br>
+    <br>
+
+
+
+        <img id="image" src="jordan.jpg" width="150px" alt="">
+
+
+        
+    
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+    
+
+    function select(){
+
+
+        var x=document.getElementById("choose").value;
+        if(x=="Jordan"){
+            document.getElementById("image").src="jordan.jpg";
+        }
+        else if (x=="Palastine"){
+            document.getElementById("image").src="palastine.jfif";
+
+
+        }
+
+
+        else if (x=="Qatar"){
+            document.getElementById("image").src="Qatar.jfif";
+
+
+        }
+    } 
+
+</script>
+</html>
