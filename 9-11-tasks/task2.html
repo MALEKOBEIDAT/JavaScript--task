@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action=""   >
+        <label  for="username">Subject</label>
+        <input type="text" id="username">
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        
+
+        <label for="">User:  </label>
+        
+        <input type="radio" id="provider" name="gender" value="provider">
+        <label for="">provider</label>
+
+        
+        
+
+        <input type="radio" id="buyer" value="buyer">
+        <label for="">buyer</label>
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+     
+
+        <label for=""> Description</label>
+        <input type="text" id="BErif">
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+       
+        <label for="">Used Language : </label>
+
+        <br>
+        
+        <br>
+        <br>
+        
+
+        
+
+        <input type="checkbox" id="box1" value="Python" >
+        <label for="">python</label>
+
+
+        <input type="checkbox" id="box2" value="Java">
+
+
+        <label for="">Java</label>
+
+
+        <input type="checkbox" id="box3" value="C++">
+
+        <label for="">C++</label>
+        <br>
+        <br><br><br>
+
+
+
+        <button onclick="show()" type="button" >Submit</button >
+
+
+
+
+            <div id="data">
+                
+            <span id="namee" ></span>
+            <span id="descc" ></span>
+            <span id="lann" ></span>
+            <span id="mail" ></span>
+            <span id="femail" ></span>
+
+
+
+
+
+            
+            </div>
+        
+
+        
+
+
+
+
+
+
+    </form>
+
+
+</body>
+
+<script>
+    function show(){
+        
+        var Username=document.getElementById("username").value;
+        var BErif=document.getElementById("BErif").value;
+        var box1=document.getElementById("box1").checked;
+        var box2=document.getElementById("box2").checked;
+        var box3=document.getElementById("box3").checked;
+
+    
+
+
+        
+
+
+
+        sessionStorage.setItem("user",Username)
+
+        sessionStorage.getItem("Username")
+
+        
+        sessionStorage.setItem("desc",BErif)
+
+        sessionStorage.getItem("BErif")
+
+          
+
+        sessionStorage.setItem("box1",box1);
+        sessionStorage.getItem("box1");
+
+        
+        sessionStorage.setItem("box2",box2);
+        sessionStorage.getItem("box2");
+
+        
+        sessionStorage.setItem("box3",box3);
+        sessionStorage.getItem("box3");
+
+
+
+
+
+        document.getElementById("namee").innerHTML=(Username );
+        document.getElementById("descc").innerHTML=(BErif );
+
+       
+
+
+
+
+
+
+        
+
+
+        sessionStorage.setItem("provider",document.getElementById("provider").checked);
+        let provider=sessionStorage.getItem("provider");
+
+
+        
+
+        sessionStorage.setItem("buyer",document.getElementById("buyer").checked);
+        let buyer =sessionStorage.getItem("buyer");
+
+
+
+
+
+
+        
+
+
+
+
+
+        if(provider=="true"){
+            document.getElementById("mail").innerHTML+="provider";
+        }
+
+        else if(buyer=="true"){
+            document.getElementById("femail").innerHTML+="buyer";
+
+        }
+
+
+
+
+        
+
+
+
+
+
+
+
+        if(sessionStorage.getItem("box1")=="true"){
+            document.getElementById("lann").innerHTML+="python";
+        }
+        
+
+        
+        if(sessionStorage.getItem("box2")=="true"){
+            document.getElementById("lann").innerHTML+="Java";
+        }
+        
+
+        
+        
+        if(sessionStorage.getItem("box3")=="true"){
+            document.getElementById("lann").innerHTML+="C++";
+        }
+        
+
+
+
+
+
+
+      
+
+
+
+
+        
+
+        
+
+
+
+            
+        
+
+        
+
+
+   
+   
+    
+        // function Gen(){
+
+
+
+
+
+        //     var G=document.getElementById("Mail").checked;
+        //     var k=document.getElementById("Fmail").checked;
+
+
+
+        //     if(document.getElementById("Mail").checked){
+   
+        //          document.getElementById("pp").innerHTML= "MAil";
+
+        //     }
+
+
+        //     else{
+   
+   
+        //         document.getElementById("Mail").value;
+
+
+        //     }
+
+        //     sessionStorage.setItem("gender",G);
+
+        // }
+        // Gen();
+
+
+
+
+    }
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</html>
