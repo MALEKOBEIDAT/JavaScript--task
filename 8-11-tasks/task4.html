@@ -19,11 +19,11 @@
         <br>
 
         <label for=""> Repat Password</label>
-        <input type="password" id="pass2" onchange="any()">
+        <input type="password" id="pass2" onchange="any1()">
         <span></span>
         <br>
 
-        <input type="submit" value="Submit" id="sub" >
+        <input type="submit" value="Submit" id="sub" style="display: none;" >
 
 
     </form>
@@ -38,24 +38,36 @@
        
         var x = document.getElementById("pass1").value;
    
-        var y = document.getElementById("pass2").value;
-
         if (x.length<=6){
             document.getElementsByTagName("span")[0].innerHTML="too Short"
         }
 
-        else if(x!=y && y!=0){
+      
+
+
+    }
+
+
+
+    function any1(){
+
+       
+        var x = document.getElementById("pass1").value;
+   
+  
+        var y = document.getElementById("pass2").value;
+
+        
+        if(x!=y && y!=0){
             document.getElementsByTagName("span")[1].innerHTML="Dosnt Match"
 
 
         }
 
-        else if(x==y){
-            document.getElementById("sub").style.display="block";
+        else{
+            document.getElementById("sub").style.display="inline";
 
         }
-
-
     }
 
 

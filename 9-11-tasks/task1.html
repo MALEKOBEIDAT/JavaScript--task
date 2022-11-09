@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action=""  >
+        <label  for="username">Your Name</label>
+        <input type="text" id="username">
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+        <label for="">Age</label>
+        <input type="number " id="Age">
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+
+        <label for="">Gender:  </label>
+        
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="">Mail</label>
+
+        
+        
+
+        <input type="radio" id="fmale" value="fmale">
+        <label for="">Fmail</label>
+
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <label for="">Brief Description</label>
+        <input type="text" id="BErif">
+
+
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <label for="">Unevercity</label>
+        <input type="text" id="Unevercity">
+
+        <br>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+
+
+        <label for="">Major</label>
+        <input type="text" id="Major">
+
+        <br>
+        
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <label for="">Programming Language you prefer: </label>
+
+        <br>
+        
+        <br>
+        <br>
+        
+
+        
+
+        <input type="checkbox" id="box1" value="Python" >
+        <label for="">python</label>
+
+
+        <input type="checkbox" id="box2" value="Java">
+
+
+        <label for="">Java</label>
+
+
+        <input type="checkbox" id="box3" value="C++">
+
+        <label for="">C++</label>
+        <br>
+        <br><br><br>
+
+
+
+        <button onclick="show()" type="button" >Submit</button >
+
+
+
+
+            <div id="data">
+                
+            <span id="namee" ></span>
+            <span id="Agee" ></span>
+            <span id="descc" ></span>
+            <span id="uni" ></span>
+            <span id="maj" ></span>
+            <span id="mail" ></span>
+            <span id="femail" ></span>
+            <span id="lann" ></span>
+
+
+
+
+
+            
+            </div>
+        
+
+        
+
+
+
+
+
+
+    </form>
+
+
+</body>
+
+<script>
+    function show(){
+        
+        var Username=document.getElementById("username").value;
+        var Age=document.getElementById("Age").value;
+        var BErif=document.getElementById("BErif").value;
+        var Unevercity=document.getElementById("Unevercity").value;
+        var Major=document.getElementById("Major").value;
+        var box1=document.getElementById("box1").checked;
+        var box2=document.getElementById("box2").checked;
+        var box3=document.getElementById("box3").checked;
+
+    
+
+
+        
+
+
+
+        localStorage.setItem("user",Username)
+
+        localStorage.getItem("Username")
+
+        localStorage.setItem("age",Age)
+
+        localStorage.getItem("Age")
+
+        
+        localStorage.setItem("desc",BErif)
+
+        localStorage.getItem("BErif")
+
+          
+        localStorage.setItem("Unevercity",Unevercity)
+
+        localStorage.getItem("Unevercity")
+
+        localStorage.setItem("major",Major);
+        localStorage.getItem("major");
+
+        localStorage.setItem("box1",box1);
+        localStorage.getItem("box1");
+
+        
+        localStorage.setItem("box2",box2);
+        localStorage.getItem("box2");
+
+        
+        localStorage.setItem("box3",box3);
+        localStorage.getItem("box3");
+
+
+
+
+
+        document.getElementById("namee").innerHTML=(Username );
+        document.getElementById("Agee").innerHTML=(Age );
+        document.getElementById("descc").innerHTML=(BErif );
+        document.getElementById("uni").innerHTML=(Unevercity );
+        document.getElementById("maj").innerHTML=(Major );
+        document.getElementById("namee").innerHTML=(Username );
+
+       
+
+
+
+        localStorage.setItem("male",document.getElementById("male").checked);
+        let male=localStorage.getItem("male");
+
+
+        
+
+        localStorage.setItem("fmale",document.getElementById("fmale").checked);
+        let fmale =localStorage.getItem("fmale");
+
+
+
+
+
+
+        
+
+
+
+
+
+        if(male=="true"){
+            document.getElementById("mail").innerHTML+="Male";
+        }
+
+        else if(fmale=="true"){
+            document.getElementById("femail").innerHTML+="fmale";
+
+        }
+
+
+
+
+        if(localStorage.getItem("box1")=="true"){
+            document.getElementById("lann").innerHTML+="python";
+        }
+        
+
+        
+        if(localStorage.getItem("box2")=="true"){
+            document.getElementById("lann").innerHTML+="Java";
+        }
+        
+
+        
+        
+        if(localStorage.getItem("box3")=="true"){
+            document.getElementById("lann").innerHTML+="C++";
+        }
+        
+
+
+
+
+
+
+      
+
+
+
+
+        
+
+        
+
+
+
+            
+        
+
+        
+
+
+   
+   
+    
+        // function Gen(){
+
+
+
+
+
+        //     var G=document.getElementById("Mail").checked;
+        //     var k=document.getElementById("Fmail").checked;
+
+
+
+        //     if(document.getElementById("Mail").checked){
+   
+        //          document.getElementById("pp").innerHTML= "MAil";
+
+        //     }
+
+
+        //     else{
+   
+   
+        //         document.getElementById("Mail").value;
+
+
+        //     }
+
+        //     localStorage.setItem("gender",G);
+
+        // }
+        // Gen();
+
+
+
+
+    }
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</html>
