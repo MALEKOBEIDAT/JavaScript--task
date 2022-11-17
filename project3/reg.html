@@ -1,0 +1,195 @@
+
+</head>
+<body>
+
+    <div>
+        <form >
+            <label for="UserName">UserName</label> <br>
+            <input type="text" name="username" id="username"><br>
+
+
+
+
+
+
+
+
+
+            
+
+            <label for="email">Email</label> <br>
+            <input type="email" name="email" id="email"><br>
+
+
+
+
+
+
+
+
+
+
+            <label for="password">Password</label> <br>
+            <input type="password" name="password" id="password"><br>
+
+
+
+
+
+
+
+
+            <button onclick="login()" type="button">Submit</button>
+
+            <p id="result" ></p>
+
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+    <script>
+
+
+
+function signup(){
+// event.preventDefault();
+
+
+var username=document.getElementById("username").value;
+
+
+var email=document.getElementById("email").value;
+
+
+var password=document.getElementById("password").value;
+
+
+
+
+var currentUser ={
+
+
+         username: username,
+
+         email:email,
+
+         password:password,
+     };
+
+     if(localStorage.getItem("users")){
+        let users = JSON.parse(localStorage.getItem('users'));
+        console.log(users[0].username)
+        if(users.length == 0 ){
+            users.push(currentUser);
+            console.log(users[0].username)
+        } else{
+
+            console.log(users[0].username)//nsreen
+
+            function isExist(){
+                for(let i = 0; i<users.length; i++){
+                    if (users[i].email == currentUser.email){
+                        return true
+
+                    }
+                }
+
+                return false;
+
+            }
+            
+                
+                if(isExist()){
+                    // console.log(users[i].username)
+                    console.log(currentUser.username)
+
+                    document.getElementById("result").innerHTML = "email already registerd"
+                    
+                } else {
+                    users.push(currentUser);
+                    localStorage.setItem("users",JSON.stringify(users));
+                    
+                    
+                }
+            
+
+        }
+     }else{
+        let users = [];
+        users.push(currentUser);
+        localStorage.setItem("users", JSON.stringify(users));
+        
+     }
+
+     var json=JSON.stringify(currentUser);
+
+     localStorage.setItem("username",json);
+     
+
+
+
+}
+function login(){
+
+    // event.preventDefault();
+
+    var email=document.getElementById("email").value;
+
+    var password=document.getElementById("password").value;
+
+    let currentUser = {
+        email: email,
+        password : password
+    }
+
+    var result=document.getElementById("result");
+
+    let users =JSON.parse(localStorage.getItem("users"));
+   console.log(currentUser.email)
+
+    function isExist(){
+        
+                for(let i = 0; i<users.length; i++){
+                    if (users[i].email == currentUser.email){
+                        return true;
+
+                    }
+                }
+
+                return false;
+
+            }
+
+           
+            if(isExist()){
+                sessionStorage.setItem("currentUser", JSON.stringify(currentUser));
+                document.getElementById('result').innerHTML = "loged in ";
+            } else {
+                document.getElementById('result').innerHTML = "not exist user ";
+            }
+
+  
+
+
+    }
+
+
+  
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

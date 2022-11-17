@@ -51,7 +51,10 @@
 
 
         <label for="">Brief Description</label>
-        <input type="text" id="BErif">
+
+        <br>
+        <br>
+        <textarea name="" id="BErif" cols="30" rows="10"></textarea>
 
 
 
@@ -114,15 +117,31 @@
 
 
 
-            <div id="data">
+            <div id="data"  style="display:none ;"  >
                 
-            <span id="namee" ></span>
-            <span id="Agee" ></span>
+            <span  id="namee" >Name:  </span>
+            <br>            <br>
+
+            
+            <span id="Agee" > </span>
+
+            <br>            <br>
+
             <span id="descc" ></span>
+            <br>            <br>
+
             <span id="uni" ></span>
+            <br>            <br>
+
             <span id="maj" ></span>
+            <br>            <br>
+
             <span id="mail" ></span>
+            <br>            <br>
+
             <span id="femail" ></span>
+            <br>            <br>
+
             <span id="lann" ></span>
 
 
@@ -146,7 +165,10 @@
 </body>
 
 <script>
+
     function show(){
+
+        document.getElementById("data").style.display="block";
         
         var Username=document.getElementById("username").value;
         var Age=document.getElementById("Age").value;
@@ -200,12 +222,12 @@
 
 
 
-        document.getElementById("namee").innerHTML=(Username );
-        document.getElementById("Agee").innerHTML=(Age );
-        document.getElementById("descc").innerHTML=(BErif );
-        document.getElementById("uni").innerHTML=(Unevercity );
-        document.getElementById("maj").innerHTML=(Major );
-        document.getElementById("namee").innerHTML=(Username );
+        document.getElementById("namee").innerHTML+=(Username );
+        document.getElementById("Agee").innerHTML+=(Age );
+        document.getElementById("descc").innerHTML+=(BErif );
+        document.getElementById("uni").innerHTML+=(Unevercity );
+        document.getElementById("maj").innerHTML+=(Major );
+        document.getElementById("namee").innerHTML+=(Username );
 
        
 
